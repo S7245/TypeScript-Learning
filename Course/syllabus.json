@@ -1,0 +1,1114 @@
+{
+  "course": {
+    "title": "TypeScript 50 天高级学习计划",
+    "project": "OpsBoard Studio",
+    "projectDescription": "基于 TypeScript、React、Next.js 的现代 B2B 数据监控、任务协作与 API 管理工作台",
+    "startDate": "2026-05-16",
+    "timezone": "Asia/Shanghai",
+    "dailyPushTime": "12:00",
+    "version": "2026.05",
+    "requiredSections": [
+      "主题",
+      "学习重点",
+      "项目实践",
+      "核心理解",
+      "参考源"
+    ],
+    "notionPage": "https://www.notion.so/TypeScript-Plan-361bfc73ea148025bf84d9aedf822d24?source=copy_link",
+    "notionDatabase": "https://www.notion.so/6ac28972c06c440fbaa1623e29e56774",
+    "notionDataSource": "collection://8d568666-c536-4d0c-9a49-0670a084e3b6",
+    "notionView": "view://361bfc73-ea14-81bc-9d42-000c07021133",
+    "githubRepo": "/Users/liushan/Documents/Codex/TypeScript-Learning",
+    "githubRemote": "https://github.com/S7245/TypeScript-Learning",
+    "targetStack": [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Zustand",
+      "TanStack Query",
+      "Zod",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Playwright",
+      "ESLint",
+      "Prettier",
+      "GitHub Actions",
+      "Monorepo"
+    ]
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-05-16",
+      "node": "节点 1",
+      "difficulty": "入门",
+      "topic": "TypeScript 学习环境与工程心智",
+      "focus": "tsc、tsconfig、strict 模式、TypeScript 与 JavaScript 的关系",
+      "practice": "初始化 OpsBoard Studio 仓库结构，创建 Course/syllabus.json 与 Days/Day01/",
+      "understanding": "TypeScript 是静态类型层，不改变 JavaScript 运行时行为。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/intro.html",
+        "https://www.typescriptlang.org/docs/handbook/tsconfig-json.html",
+        "https://www.typescriptlang.org/tsconfig/strict.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "tooling_mindset"
+    },
+    {
+      "day": 2,
+      "date": "2026-05-17",
+      "node": "节点 1",
+      "difficulty": "入门",
+      "topic": "基础类型、字面量类型与联合类型",
+      "focus": "string、number、boolean、literal types、union types、类型收窄",
+      "practice": "为任务状态、优先级、监控状态建立类型模型",
+      "understanding": "类型可以被理解为值的集合，联合类型表达业务可能性。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html",
+        "https://www.typescriptlang.org/docs/handbook/2/narrowing.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "primitive_union_types"
+    },
+    {
+      "day": 3,
+      "date": "2026-05-18",
+      "node": "节点 1",
+      "difficulty": "入门",
+      "topic": "对象类型、接口与结构化类型系统",
+      "focus": "type、interface、可选属性、只读属性、excess property checks",
+      "practice": "建模 User、Workspace、Project、MetricCard",
+      "understanding": "TypeScript 采用结构化类型，关注对象形状而不是类名。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/objects.html",
+        "https://www.typescriptlang.org/docs/handbook/interfaces.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "object_interface_modeling"
+    },
+    {
+      "day": 4,
+      "date": "2026-05-19",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "函数类型、泛型与类型推导",
+      "focus": "函数签名、回调类型、泛型函数、泛型约束、返回值推导",
+      "practice": "编写任务筛选、指标格式化、状态转换工具函数",
+      "understanding": "泛型用于保留输入与输出之间的类型关系。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/functions.html",
+        "https://www.typescriptlang.org/docs/handbook/2/generics.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "generic_functions"
+    },
+    {
+      "day": 5,
+      "date": "2026-05-20",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "数组、元组、Record 与集合建模",
+      "focus": "Array<T>、readonly array、tuple、Record<K,V>、索引访问",
+      "practice": "构建 OpsBoard mock 数据层和基于 ID 的查找表",
+      "understanding": "集合类型设计决定数据访问边界和可变性风险。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays",
+        "https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures",
+        "https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "collection_modeling"
+    },
+    {
+      "day": 6,
+      "date": "2026-05-21",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "联合、交叉与可辨识联合",
+      "focus": "discriminated union、intersection types、never 穷尽检查",
+      "practice": "建模任务生命周期、API 请求状态、错误状态",
+      "understanding": "好的类型设计可以让不可能状态无法被表达。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions",
+        "https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "discriminated_unions"
+    },
+    {
+      "day": 7,
+      "date": "2026-05-22",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "类型运算与派生类型",
+      "focus": "keyof、typeof、indexed access、mapped types、utility types",
+      "practice": "从配置对象派生表格列、权限矩阵和筛选条件类型",
+      "understanding": "类型应尽量从事实源派生，减少重复声明。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/2/keyof-types.html",
+        "https://www.typescriptlang.org/docs/handbook/2/typeof-types.html",
+        "https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html",
+        "https://www.typescriptlang.org/docs/handbook/2/mapped-types.html",
+        "https://www.typescriptlang.org/docs/handbook/utility-types.html"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "derived_types"
+    },
+    {
+      "day": 8,
+      "date": "2026-05-23",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "模块系统与工程边界",
+      "focus": "ESM、命名导出、默认导出、路径别名、模块组织",
+      "practice": "拆分 domain、data、utils、app 等目录边界",
+      "understanding": "模块边界既是代码组织边界，也是认知复杂度边界。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/modules/introduction.html",
+        "https://www.typescriptlang.org/tsconfig/#paths",
+        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+      ],
+      "stack": [
+        "TypeScript"
+      ],
+      "codeSlug": "module_boundaries"
+    },
+    {
+      "day": 9,
+      "date": "2026-05-24",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "代码质量工具链基础",
+      "focus": "ESLint、Prettier、类型检查脚本、Git 提交规范",
+      "practice": "配置基础 lint、format、typecheck 脚本并补充 README",
+      "understanding": "工程规范让类型系统从个人习惯变成团队约束。",
+      "reference": [
+        "https://eslint.org/docs/latest/use/getting-started",
+        "https://eslint.org/docs/latest/use/configure/configuration-files",
+        "https://prettier.io/docs/install.html",
+        "https://www.typescriptlang.org/docs/handbook/compiler-options.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "ESLint",
+        "Prettier"
+      ],
+      "codeSlug": "quality_tooling"
+    },
+    {
+      "day": 10,
+      "date": "2026-05-25",
+      "node": "节点 1",
+      "difficulty": "进阶",
+      "topic": "节点 1 综合验收：Typed OpsBoard Core",
+      "focus": "复盘类型系统、工具函数、模块边界、严格模式",
+      "practice": "交付一个可 typecheck 的 OpsBoard 核心类型与数据建模包",
+      "understanding": "TypeScript 的核心价值是让业务模型、代码边界和变更风险可见。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/intro.html",
+        "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
+        "https://www.typescriptlang.org/docs/handbook/modules/introduction.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "ESLint",
+        "Prettier"
+      ],
+      "codeSlug": "typed_opsboard_core"
+    },
+    {
+      "day": 11,
+      "date": "2026-05-26",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "React + TypeScript 组件基础",
+      "focus": "JSX 类型、函数组件、props 类型、组件返回值、ReactNode",
+      "practice": "为 OpsBoard Studio 创建基础 UI 组件：MetricCard、TaskItem、StatusBadge",
+      "understanding": "React 组件是状态到 UI 的声明式映射，TypeScript 约束组件输入边界。",
+      "reference": [
+        "https://react.dev/learn",
+        "https://react.dev/learn/your-first-component",
+        "https://www.typescriptlang.org/docs/handbook/jsx.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "typed_react_components"
+    },
+    {
+      "day": 12,
+      "date": "2026-05-27",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "Props 建模与组件组合",
+      "focus": "可选 props、默认值、children、组合优先于继承",
+      "practice": "组合出 Dashboard 首页的指标区、任务区、API 状态区",
+      "understanding": "组件设计的核心不是拆小，而是让数据流和职责边界清晰。",
+      "reference": [
+        "https://react.dev/learn/passing-props-to-a-component",
+        "https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children",
+        "https://react.dev/learn/thinking-in-react"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "props_composition"
+    },
+    {
+      "day": 13,
+      "date": "2026-05-28",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "React 事件与受控输入",
+      "focus": "表单事件类型、输入状态、受控组件、事件处理器类型",
+      "practice": "实现任务快速创建表单与筛选输入框",
+      "understanding": "受控组件把 UI 输入纳入 React 状态模型，便于验证、同步和调试。",
+      "reference": [
+        "https://react.dev/reference/react-dom/components/input",
+        "https://react.dev/learn/responding-to-events",
+        "https://react.dev/learn/state-a-components-memory"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "events_controlled_inputs"
+    },
+    {
+      "day": 14,
+      "date": "2026-05-29",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "React 状态建模",
+      "focus": "useState 类型推导、状态初始化、复杂状态拆分、派生状态",
+      "practice": "为任务列表添加筛选、排序、选中状态",
+      "understanding": "状态越靠近使用处越简单，派生数据不应重复存储。",
+      "reference": [
+        "https://react.dev/reference/react/useState",
+        "https://react.dev/learn/choosing-the-state-structure",
+        "https://react.dev/learn/you-might-not-need-an-effect"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "react_state_modeling"
+    },
+    {
+      "day": 15,
+      "date": "2026-05-30",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "列表渲染与可辨识 UI 状态",
+      "focus": "key、条件渲染、empty/loading/error/success 状态建模",
+      "practice": "实现任务列表、空状态、错误提示和加载骨架",
+      "understanding": "UI 状态也应被类型化，避免页面进入无法解释的中间状态。",
+      "reference": [
+        "https://react.dev/learn/rendering-lists",
+        "https://react.dev/learn/conditional-rendering",
+        "https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "typed_ui_states"
+    },
+    {
+      "day": 16,
+      "date": "2026-05-31",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "React 表单设计与类型安全",
+      "focus": "表单字段类型、提交数据类型、客户端校验入口",
+      "practice": "实现创建任务弹层表单，输出类型安全的 CreateTaskInput",
+      "understanding": "表单是外部输入边界，类型定义要服务于校验、提交和错误展示。",
+      "reference": [
+        "https://react.dev/reference/react-dom/components/form",
+        "https://react.dev/reference/react-dom/components/input",
+        "https://www.typescriptlang.org/docs/handbook/2/objects.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "typed_forms"
+    },
+    {
+      "day": 17,
+      "date": "2026-06-01",
+      "node": "节点 2",
+      "difficulty": "进阶",
+      "topic": "自定义 Hook 与逻辑复用",
+      "focus": "Hook 返回值类型、参数泛型、状态逻辑封装",
+      "practice": "抽取 useTaskFilters、useDashboardMetrics",
+      "understanding": "Hook 是复用状态逻辑的模块边界，不应变成隐藏全局状态。",
+      "reference": [
+        "https://react.dev/learn/reusing-logic-with-custom-hooks",
+        "https://react.dev/reference/rules/rules-of-hooks",
+        "https://www.typescriptlang.org/docs/handbook/2/generics.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "custom_hooks"
+    },
+    {
+      "day": 18,
+      "date": "2026-06-02",
+      "node": "节点 2",
+      "difficulty": "高级",
+      "topic": "组件 API 设计与组合模式",
+      "focus": "controlled/uncontrolled、compound components、render props 基础",
+      "practice": "设计可复用的 Tabs、Panel、Toolbar 组件",
+      "understanding": "好的组件 API 应让常见用法简单、复杂用法可扩展。",
+      "reference": [
+        "https://react.dev/learn/sharing-state-between-components",
+        "https://react.dev/learn/preserving-and-resetting-state",
+        "https://react.dev/reference/react/Children"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "component_api_patterns"
+    },
+    {
+      "day": 19,
+      "date": "2026-06-03",
+      "node": "节点 2",
+      "difficulty": "高级",
+      "topic": "React 性能与渲染边界",
+      "focus": "re-render、memo、callback、derived data、组件拆分策略",
+      "practice": "优化 OpsBoard Dashboard 的筛选和指标计算",
+      "understanding": "性能优化首先来自正确的状态位置和组件边界，而不是机械使用 memo。",
+      "reference": [
+        "https://react.dev/reference/react/memo",
+        "https://react.dev/reference/react/useMemo",
+        "https://react.dev/reference/react/useCallback",
+        "https://react.dev/learn/render-and-commit"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "render_boundaries"
+    },
+    {
+      "day": 20,
+      "date": "2026-06-04",
+      "node": "节点 2",
+      "difficulty": "高级",
+      "topic": "节点 2 综合验收：Typed React Dashboard",
+      "focus": "复盘组件类型、状态、表单、组合模式、渲染边界",
+      "practice": "交付一个可交互的 OpsBoard React Dashboard 原型",
+      "understanding": "React + TypeScript 的工程价值在于让 UI 契约、数据流和交互状态可维护。",
+      "reference": [
+        "https://react.dev/learn/thinking-in-react",
+        "https://react.dev/learn/managing-state",
+        "https://www.typescriptlang.org/docs/handbook/jsx.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React"
+      ],
+      "codeSlug": "typed_react_dashboard"
+    },
+    {
+      "day": 21,
+      "date": "2026-06-05",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Next.js App Router 入门",
+      "focus": "App Router、目录约定、页面、布局、路由段、元数据",
+      "practice": "将 OpsBoard Studio 迁移到 Next.js App Router 项目结构",
+      "understanding": "Next.js 不只是路由框架，它把页面、数据、渲染和部署边界整合到同一工程模型中。",
+      "reference": [
+        "https://nextjs.org/docs/app",
+        "https://nextjs.org/docs/app/getting-started/project-structure",
+        "https://nextjs.org/docs/app/getting-started/layouts-and-pages"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "codeSlug": "next_app_router"
+    },
+    {
+      "day": 22,
+      "date": "2026-06-06",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Server Components 与 Client Components",
+      "focus": "Server Component 默认行为、use client、组件边界、序列化限制",
+      "practice": "拆分 Dashboard 为服务端布局和客户端交互组件",
+      "understanding": "Server / Client 边界本质是运行环境边界，不是简单的组件分类。",
+      "reference": [
+        "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+        "https://react.dev/reference/rsc/server-components",
+        "https://react.dev/reference/rsc/use-client"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "codeSlug": "server_client_components"
+    },
+    {
+      "day": 23,
+      "date": "2026-06-07",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Next.js 数据获取与异步页面",
+      "focus": "async Server Component、fetch、缓存、重新验证、加载状态",
+      "practice": "为指标、任务、API 状态建立服务端 mock 数据读取层",
+      "understanding": "数据获取位置会影响性能、缓存策略、交互能力和类型边界。",
+      "reference": [
+        "https://nextjs.org/docs/app/building-your-application/data-fetching",
+        "https://nextjs.org/docs/app/api-reference/file-conventions/loading",
+        "https://nextjs.org/docs/app/getting-started/caching-and-revalidating"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "codeSlug": "next_data_fetching"
+    },
+    {
+      "day": 24,
+      "date": "2026-06-08",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "动态路由与详情页建模",
+      "focus": "dynamic routes、route params、not-found、页面级类型建模",
+      "practice": "实现任务详情页、项目详情页和 API 端点详情页",
+      "understanding": "URL 是产品信息架构的一部分，也应与业务实体模型保持一致。",
+      "reference": [
+        "https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes",
+        "https://nextjs.org/docs/app/api-reference/file-conventions/not-found",
+        "https://nextjs.org/docs/app/getting-started/linking-and-navigating"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "codeSlug": "dynamic_routes"
+    },
+    {
+      "day": 25,
+      "date": "2026-06-09",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Route Handlers 与 API 边界",
+      "focus": "route.ts、HTTP method、请求响应类型、错误响应结构",
+      "practice": "创建任务、更新任务状态、读取指标的 API Route",
+      "understanding": "API 边界必须同时处理静态类型、运行时输入和错误协议。",
+      "reference": [
+        "https://nextjs.org/docs/app/api-reference/file-conventions/route",
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods",
+        "https://www.typescriptlang.org/docs/handbook/2/objects.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js"
+      ],
+      "codeSlug": "route_handlers"
+    },
+    {
+      "day": 26,
+      "date": "2026-06-10",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Zod 入门与运行时校验",
+      "focus": "schema、parse、safeParse、类型推导、错误结构",
+      "practice": "为 CreateTaskInput、UpdateTaskStatusInput 编写 Zod schema",
+      "understanding": "TypeScript 只保护编译期，Zod 负责外部输入的运行时可信度。",
+      "reference": [
+        "https://zod.dev/",
+        "https://zod.dev/basics",
+        "https://zod.dev/error-customization"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Zod"
+      ],
+      "codeSlug": "zod_runtime_validation"
+    },
+    {
+      "day": 27,
+      "date": "2026-06-11",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Zod 与接口契约协同",
+      "focus": "schema 复用、DTO、domain model、输入输出分层",
+      "practice": "用 Zod 统一表单提交、Route Handler 校验和响应数据结构",
+      "understanding": "类型安全的关键是让运行时 schema 和静态类型来自同一事实源。",
+      "reference": [
+        "https://zod.dev/basics",
+        "https://zod.dev/json-schema",
+        "https://www.typescriptlang.org/docs/handbook/2/typeof-types.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Zod"
+      ],
+      "codeSlug": "zod_api_contracts"
+    },
+    {
+      "day": 28,
+      "date": "2026-06-12",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "TanStack Query 基础",
+      "focus": "queryClient、queryKey、useQuery、缓存、加载与错误状态",
+      "practice": "在客户端组件中接入任务列表和指标查询",
+      "understanding": "TanStack Query 管理的是服务端状态，不应被当成本地 UI 状态容器。",
+      "reference": [
+        "https://tanstack.com/query/latest/docs/framework/react/overview",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/queries",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/query-keys"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "TanStack Query"
+      ],
+      "codeSlug": "tanstack_query_basics"
+    },
+    {
+      "day": 29,
+      "date": "2026-06-13",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "Mutation、失效与乐观更新",
+      "focus": "useMutation、invalidateQueries、optimistic update、错误回滚",
+      "practice": "实现任务创建、状态变更和列表自动同步",
+      "understanding": "服务端状态同步的难点不是请求成功，而是缓存一致性和失败恢复。",
+      "reference": [
+        "https://tanstack.com/query/latest/docs/framework/react/guides/mutations",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/invalidations-from-mutations",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "TanStack Query"
+      ],
+      "codeSlug": "query_mutations"
+    },
+    {
+      "day": 30,
+      "date": "2026-06-14",
+      "node": "节点 3",
+      "difficulty": "高级",
+      "topic": "节点 3 综合验收：Typed Next.js Data App",
+      "focus": "复盘 App Router、Server / Client 边界、Zod、TanStack Query",
+      "practice": "交付一个具备路由、API、运行时校验和数据缓存的 OpsBoard Studio",
+      "understanding": "现代 TypeScript 全栈工程的核心是让页面、接口、缓存和校验共享清晰契约。",
+      "reference": [
+        "https://nextjs.org/docs/app",
+        "https://zod.dev/",
+        "https://tanstack.com/query/latest/docs/framework/react/overview"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "TanStack Query",
+        "Zod"
+      ],
+      "codeSlug": "typed_next_data_app"
+    },
+    {
+      "day": 31,
+      "date": "2026-06-15",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Zustand 本地状态管理",
+      "focus": "store、selector、action、状态切片、React 绑定",
+      "practice": "为 OpsBoard Studio 创建 UI 偏好、侧边栏、筛选面板本地 store",
+      "understanding": "Zustand 适合管理客户端本地状态，不应替代服务端数据缓存。",
+      "reference": [
+        "https://zustand.docs.pmnd.rs/getting-started/introduction",
+        "https://zustand.docs.pmnd.rs/guides/typescript",
+        "https://zustand.docs.pmnd.rs/apis/create"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Zustand"
+      ],
+      "codeSlug": "zustand_local_state"
+    },
+    {
+      "day": 32,
+      "date": "2026-06-16",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Zustand 与类型安全架构",
+      "focus": "store 类型推导、slice pattern、持久化、中间件、状态边界",
+      "practice": "拆分 uiStore、filterStore、workspaceStore",
+      "understanding": "状态管理的核心是定义清楚谁拥有状态和谁可以修改状态。",
+      "reference": [
+        "https://zustand.docs.pmnd.rs/guides/typescript",
+        "https://zustand.docs.pmnd.rs/guides/slices-pattern",
+        "https://zustand.docs.pmnd.rs/middlewares/persist"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Zustand"
+      ],
+      "codeSlug": "zustand_architecture"
+    },
+    {
+      "day": 33,
+      "date": "2026-06-17",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Tailwind CSS 工程化布局",
+      "focus": "utility-first、响应式断点、布局系统、设计 token",
+      "practice": "用 Tailwind 重构 Dashboard 主布局、侧边栏、顶部导航和内容区",
+      "understanding": "Tailwind 的价值不是少写 CSS，而是把样式约束沉入可组合的设计系统。",
+      "reference": [
+        "https://tailwindcss.com/docs/styling-with-utility-classes",
+        "https://tailwindcss.com/docs/responsive-design",
+        "https://tailwindcss.com/docs/theme"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "codeSlug": "tailwind_layout"
+    },
+    {
+      "day": 34,
+      "date": "2026-06-18",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Tailwind 组件样式与状态变体",
+      "focus": "hover、focus、dark mode、data attribute、条件 class 组合",
+      "practice": "为任务卡片、状态徽章、筛选栏添加交互与视觉状态",
+      "understanding": "样式状态应与业务状态保持一致，避免 UI 看起来可用但数据不可用。",
+      "reference": [
+        "https://tailwindcss.com/docs/hover-focus-and-other-states",
+        "https://tailwindcss.com/docs/dark-mode",
+        "https://tailwindcss.com/docs/functions-and-directives"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "codeSlug": "tailwind_state_variants"
+    },
+    {
+      "day": 35,
+      "date": "2026-06-19",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "shadcn/ui 基础与组件组合",
+      "focus": "安装方式、Radix 原语、Button、Dialog、Dropdown、Tabs",
+      "practice": "用 shadcn/ui 重构任务创建弹窗、菜单、标签页和工具栏",
+      "understanding": "shadcn/ui 是可复制源码的组件体系，重点是掌握组合与可维护改造。",
+      "reference": [
+        "https://ui.shadcn.com/docs",
+        "https://ui.shadcn.com/docs/components/button",
+        "https://ui.shadcn.com/docs/components/dialog",
+        "https://ui.shadcn.com/docs/components/dropdown-menu",
+        "https://ui.shadcn.com/docs/components/tabs"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "codeSlug": "shadcn_composition"
+    },
+    {
+      "day": 36,
+      "date": "2026-06-20",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "表单体验与复杂交互",
+      "focus": "表单状态、错误展示、弹窗交互、键盘可达性、loading 状态",
+      "practice": "完成任务创建 / 编辑表单的完整交互闭环",
+      "understanding": "复杂交互的质量来自状态、校验、可访问性和反馈时机的一致设计。",
+      "reference": [
+        "https://react.dev/reference/react-dom/components/form",
+        "https://ui.shadcn.com/docs/components/form",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Zod",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "codeSlug": "complex_forms"
+    },
+    {
+      "day": 37,
+      "date": "2026-06-21",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Playwright E2E 测试入门",
+      "focus": "test、expect、locator、用户路径、测试隔离",
+      "practice": "编写 Dashboard 加载、任务创建、筛选、状态更新的 E2E 测试",
+      "understanding": "E2E 测试验证的是真实用户流程，不是内部实现细节。",
+      "reference": [
+        "https://playwright.dev/docs/intro",
+        "https://playwright.dev/docs/writing-tests",
+        "https://playwright.dev/docs/locators",
+        "https://playwright.dev/docs/test-assertions"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Playwright"
+      ],
+      "codeSlug": "playwright_basics"
+    },
+    {
+      "day": 38,
+      "date": "2026-06-22",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "Playwright 高级场景",
+      "focus": "mock network、测试数据、认证准备、trace、截图与调试",
+      "practice": "为 API 失败、空状态、乐观更新回滚补充测试",
+      "understanding": "好的 E2E 测试应覆盖关键风险路径，而不是追求页面元素数量。",
+      "reference": [
+        "https://playwright.dev/docs/mock",
+        "https://playwright.dev/docs/auth",
+        "https://playwright.dev/docs/trace-viewer-intro",
+        "https://playwright.dev/docs/test-snapshots"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Playwright"
+      ],
+      "codeSlug": "playwright_advanced"
+    },
+    {
+      "day": 39,
+      "date": "2026-06-23",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "前端可维护性与可访问性验收",
+      "focus": "aria、focus 管理、语义结构、组件边界、交互一致性",
+      "practice": "对 OpsBoard Studio 进行可访问性与交互质量修正",
+      "understanding": "工程质量不仅是类型正确，也包括真实用户能稳定、清楚地完成任务。",
+      "reference": [
+        "https://www.w3.org/WAI/ARIA/apg/",
+        "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA",
+        "https://react.dev/reference/react-dom/components/common"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "codeSlug": "accessibility_review"
+    },
+    {
+      "day": 40,
+      "date": "2026-06-24",
+      "node": "节点 4",
+      "difficulty": "高级",
+      "topic": "节点 4 综合验收：Polished Interactive OpsBoard",
+      "focus": "复盘 Zustand、Tailwind、shadcn/ui、复杂交互、Playwright",
+      "practice": "交付一个具备良好交互、样式系统和 E2E 覆盖的 OpsBoard Studio",
+      "understanding": "现代前端工程的成熟度体现在状态边界、视觉系统和用户路径验证的统一。",
+      "reference": [
+        "https://zustand.docs.pmnd.rs/getting-started/introduction",
+        "https://tailwindcss.com/docs/styling-with-utility-classes",
+        "https://ui.shadcn.com/docs",
+        "https://playwright.dev/docs/intro"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Zustand",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Playwright"
+      ],
+      "codeSlug": "polished_interactive_opsboard"
+    },
+    {
+      "day": 41,
+      "date": "2026-06-25",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "Monorepo 工程架构入门",
+      "focus": "workspace、包边界、应用包与共享包、依赖关系",
+      "practice": "将 OpsBoard Studio 拆分为 apps/web、packages/ui、packages/domain、packages/config",
+      "understanding": "Monorepo 的价值不是把代码放在一起，而是让共享契约和变更影响更可控。",
+      "reference": [
+        "https://pnpm.io/workspaces",
+        "https://docs.npmjs.com/cli/using-npm/workspaces",
+        "https://turbo.build/repo/docs"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Monorepo"
+      ],
+      "codeSlug": "monorepo_architecture"
+    },
+    {
+      "day": 42,
+      "date": "2026-06-26",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "共享类型与领域包设计",
+      "focus": "domain model、DTO、schema、类型导出策略、循环依赖规避",
+      "practice": "抽出任务、指标、API 管理相关类型与 Zod schema 到 packages/domain",
+      "understanding": "共享包应表达稳定业务契约，不应泄漏页面实现细节。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/modules/introduction.html",
+        "https://zod.dev/basics",
+        "https://pnpm.io/workspaces"
+      ],
+      "stack": [
+        "TypeScript",
+        "Zod",
+        "Monorepo"
+      ],
+      "codeSlug": "domain_package"
+    },
+    {
+      "day": 43,
+      "date": "2026-06-27",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "共享 UI 包与设计系统雏形",
+      "focus": "UI package、组件导出、Tailwind preset、shadcn/ui 复用策略",
+      "practice": "将 Button、Dialog、StatusBadge、MetricCard 整理进 packages/ui",
+      "understanding": "UI 包的重点是统一交互和视觉约束，而不是堆积所有组件。",
+      "reference": [
+        "https://ui.shadcn.com/docs",
+        "https://tailwindcss.com/docs/theme",
+        "https://pnpm.io/workspaces"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Monorepo"
+      ],
+      "codeSlug": "ui_package"
+    },
+    {
+      "day": 44,
+      "date": "2026-06-28",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "ESLint / Prettier 多包工程规范",
+      "focus": "flat config、共享规则、格式化边界、import 约束",
+      "practice": "建立 packages/config，统一 lint、format、tsconfig 配置",
+      "understanding": "工程规范越靠近仓库根部，越能减少团队协作中的隐性分歧。",
+      "reference": [
+        "https://eslint.org/docs/latest/use/configure/configuration-files",
+        "https://prettier.io/docs/configuration",
+        "https://www.typescriptlang.org/tsconfig/"
+      ],
+      "stack": [
+        "TypeScript",
+        "ESLint",
+        "Prettier",
+        "Monorepo"
+      ],
+      "codeSlug": "shared_config_package"
+    },
+    {
+      "day": 45,
+      "date": "2026-06-29",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "TypeScript 项目引用与构建优化",
+      "focus": "project references、composite、incremental、路径别名、构建顺序",
+      "practice": "为 Monorepo 配置可增量构建的 TypeScript 项目引用",
+      "understanding": "大型 TypeScript 工程需要让类型检查具备边界感和可缓存性。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/handbook/project-references.html",
+        "https://www.typescriptlang.org/tsconfig/#composite",
+        "https://www.typescriptlang.org/tsconfig/#incremental"
+      ],
+      "stack": [
+        "TypeScript",
+        "Monorepo"
+      ],
+      "codeSlug": "typescript_project_references"
+    },
+    {
+      "day": 46,
+      "date": "2026-06-30",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "GitHub Actions CI",
+      "focus": "workflow、install、lint、typecheck、test、build、cache",
+      "practice": "创建 CI 流水线，覆盖 lint、typecheck、Playwright、Next.js build",
+      "understanding": "CI 是工程质量的自动守门员，必须验证关键路径而不是只跑成功感脚本。",
+      "reference": [
+        "https://docs.github.com/en/actions/writing-workflows",
+        "https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-nodejs",
+        "https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching",
+        "https://github.com/actions/setup-node"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Playwright",
+        "GitHub Actions",
+        "Monorepo"
+      ],
+      "codeSlug": "github_actions_ci"
+    },
+    {
+      "day": 47,
+      "date": "2026-07-01",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "性能与可观测性基础",
+      "focus": "Next.js bundle、缓存策略、React 渲染成本、Web Vitals",
+      "practice": "分析 Dashboard 首屏、交互路径和数据缓存策略并做性能修正",
+      "understanding": "性能优化应从用户路径和系统瓶颈出发，而不是盲目压缩代码。",
+      "reference": [
+        "https://nextjs.org/docs/app/building-your-application/optimizing",
+        "https://web.dev/articles/vitals",
+        "https://react.dev/learn/render-and-commit",
+        "https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "TanStack Query"
+      ],
+      "codeSlug": "performance_observability"
+    },
+    {
+      "day": 48,
+      "date": "2026-07-02",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "架构重构与模块边界审查",
+      "focus": "依赖方向、feature boundaries、server-only/client-only、错误边界",
+      "practice": "重构 OpsBoard 的任务、指标、API 管理模块边界",
+      "understanding": "架构重构的目标是降低未来变更成本，而不是追求目录看起来整齐。",
+      "reference": [
+        "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+        "https://nextjs.org/docs/app/api-reference/file-conventions/error",
+        "https://www.typescriptlang.org/docs/handbook/modules/introduction.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Monorepo"
+      ],
+      "codeSlug": "architecture_refactor"
+    },
+    {
+      "day": 49,
+      "date": "2026-07-03",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "发布准备与工程验收",
+      "focus": "env、构建配置、README、测试报告、验收清单、部署前检查",
+      "practice": "完成项目文档、环境变量说明、CI 状态和最终验收清单",
+      "understanding": "可交付项目必须让别人能安装、运行、测试、理解和继续维护。",
+      "reference": [
+        "https://nextjs.org/docs/app/getting-started/deploying",
+        "https://docs.github.com/en/actions/writing-workflows",
+        "https://playwright.dev/docs/test-reporters",
+        "https://prettier.io/docs/install.html"
+      ],
+      "stack": [
+        "TypeScript",
+        "Next.js",
+        "Playwright",
+        "GitHub Actions",
+        "Monorepo"
+      ],
+      "codeSlug": "release_readiness"
+    },
+    {
+      "day": 50,
+      "date": "2026-07-04",
+      "node": "节点 5",
+      "difficulty": "架构级",
+      "topic": "毕业项目：Production-Ready OpsBoard Studio",
+      "focus": "全栈架构复盘、质量门禁、最终演示、技术债评估",
+      "practice": "交付完整 OpsBoard Studio：Monorepo、Next.js、Zod、Query、Zustand、UI、E2E、CI",
+      "understanding": "高质量 TypeScript 工程的核心是用类型、运行时校验、测试和架构边界共同管理复杂度。",
+      "reference": [
+        "https://www.typescriptlang.org/docs/",
+        "https://react.dev/learn",
+        "https://nextjs.org/docs/app",
+        "https://tanstack.com/query/latest/docs/framework/react/overview",
+        "https://zod.dev/",
+        "https://zustand.docs.pmnd.rs/getting-started/introduction",
+        "https://playwright.dev/docs/intro"
+      ],
+      "stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Zustand",
+        "TanStack Query",
+        "Zod",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Playwright",
+        "ESLint",
+        "Prettier",
+        "GitHub Actions",
+        "Monorepo"
+      ],
+      "codeSlug": "production_ready_opsboard"
+    }
+  ]
+}
